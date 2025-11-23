@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Lineicons -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- End googlw fonts  -->
+    <title>Nova Bootstrap Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (اختياري) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <!-- <nav
+      class="navbar navbar-expand-lg navbar-light bg-white py-2 border-bottom sticky-top"
+    >
+      <div class="container rare">
+        <a class="navbar-brand fw-bold" href="#">
+          <span class="">
+            <img
+              src="./images/logo-dark.svg"
+              alt="Nova Logo"
+              style="max-width: 96px"
+              class="img-fluid"
+            />
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">How It Works</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-3 padd-for-navBtn" href="#"
+                >Get Started</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white py-2 border-bottom sticky-top"
+    >
+      <div
+        class="container rare d-flex align-items-center justify-content-between"
+      >
+        <!-- اللوجو -->
+        <a class="navbar-brand fw-bold" href="#">
+          <img
+            src="./images/logo-dark.svg"
+            alt="Nova Logo"
+            style="max-width: 96px"
+            class="img-fluid"
+          />
+        </a>
+
+        <!-- زر الموبايل + زر Get Started على الموبايل -->
+        <div class="d-flex align-items-center d-lg-none">
+          <a class="btn btn-success padd-for-navBtn me-2" href="#"
+            >Get Started</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- القوائم -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">How It Works</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Dropdown</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- زر الديسكتوب بعد كل اللينكات -->
+          <a class="btn btn-success padd-for-navBtn btn-get-started" href="#"
+            >Get Started</a
+          >
+        </div>
+        <div class="sidebar-overlay"></div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="py-5 mr_btm">
+      <div class="container rare">
+        <div class="row align-items-center headtitle">
+          <div class="col-lg-6 mb-5 mb-lg-0 resize-padd-hero">
+            <span
+              class="badge background-green-light text-success-dark mb-3 fw-semibold p-2"
+              >INNOVATIVE FINTECH SOLUTIONS</span
+            >
+            <h1 class="mb-4 hero-head-weight fs-250px">
+              Secure, Efficient, and User-Friendly Financial Services
+            </h1>
+            <p class="mb-5 hero-fontsize">
+              Experience the future of finance with our secure, efficient,
+              anduser-friendly financial services.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-5 resizehero-btn-mr">
+              <a href="#" class="btn btn-success padd-for-btn"
+                >Get Started Now</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-secondary learn-more-btn padd-for-btn"
+                >Learn More &rarr;</a
+              >
+            </div>
+            <p class="text-muted small mb-4 resize-small-herotext">
+              TRUSTED BY MAJOR COMPANIES WORLDWIDE
+            </p>
+            <div class="d-flex gap-4 icon-gray">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+                alt="Airbnb"
+                height="36"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+                alt="IBM"
+                height="36"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                alt="Google"
+                height="36"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative resize-padd-hero">
+            <img
+              class="image-hero rounded-4"
+              src="./images/hero-img-1-min.jpg"
+              alt="hero_img"
+            />
+            <div class="over-absolute">
+              <div
+                class="fw-bold text-dark mb-2 text-center mb-4 color_green--light"
+              >
+                Expenses $420.50
+                <span class="badge bg-success bg-opacity-25 success-light ms-2"
+                  >+2.25%</span
+                >
+              </div>
+              <ul class="list-unstyled mb-0">
+                <li
+                  class="d-flex justify-content-between text-dark mb-2 link_border"
+                >
+                  <div class="icon_content d-flex gap-2">
+                    <div class="icon pt-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text_icon row ms-1">
+                      <span>Groceries</span>
+                      <span class="text-muted">Today</span>
+                    </div>
+                  </div>
+                  <div class="price pt-2"><p>$120.50</p></div>
+                </li>
+                <li
+                  class="d-flex justify-content-between text-dark mb-2 link_border mt-3"
+                >
+                  <div class="icon_content d-flex gap-2">
+                    <div class="icon pt-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="icon"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text_icon row ms-1">
+                      <span>Internet Subscription</span>
+                      <span class="text-muted">Yesterday</span>
+                    </div>
+                  </div>
+                  <div class="price pt-2"><p>$50.00</p></div>
+                </li>
+                <li class="d-flex justify-content-between text-dark mb-2 mt-3">
+                  <div class="icon_content d-flex gap-2">
+                    <div class="icon pt-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="icon"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text_icon row">
+                      <span>Car Maintenance</span>
+                      <span class="grey_yo">1 Weak ago</span>
+                    </div>
+                  </div>
+                  <div class="price pt-2"><p>$250.00</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US section  -->
+    <section class="py-2 mr_btm fade-up">
+      <div class="container about-container rare">
+        <div class="row g-5 align-items-center about-padd-1200">
+          <!-- Left: Image Column -->
+          <div class="col-12 col-lg-5 mb-4 mb-lg-0 rmv-padd-about">
+            <img
+              src="./images/about_2-min.jpg"
+              alt="About Us"
+              class="img-fluid rounded-4 shadow-sm mb-4 about-photo"
+            />
+
+            <!-- Mission Statement Card -->
+            <div class="text-white rounded-4 p-4 bg-success">
+              <div class="mb-2 small-opacity fw-semibold">
+                MISSION STATEMENT
+              </div>
+              <div class="fs-15px lh-base">
+                Our mission is to empower individuals and businesses by
+                delivering secure, efficient, and user-friendly financial
+                services.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Text Column -->
+          <div class="col-12 col-lg-6 rmv-padd-about">
+            <span
+              class="badge background-green-light text-success-dark mb-3 fw-semibold"
+              >ABOUT US</span
+            >
+            <h2 class="fw-semi-bold mb-3 mb-md-4 about-heading">
+              Experience the future of finance with our secure, efficient, and
+              user-friendly financial services
+            </h2>
+            <p class="text-black-50 mb-3">
+              Founded with the vision of revolutionizing the financial industry,
+              we are a leading fintech company dedicated to providing innovative
+              and secure financial solutions.
+            </p>
+            <p class="text-black-50 mb-4">
+              Our cutting-edge platform ensures your transactions are safe,
+              streamlined, and easy to manage, empowering you to take control of
+              your financial journey with confidence and convenience.
+            </p>
+
+            <!-- Key Values and Vision -->
+            <div class="text-black-50">
+              <div class="fw-semibold mb-2">Key Values and Vision</div>
+              <div class="d-flex flex-wrap gap-2 key-values">
+                <span class="d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-success-dark"></i>
+                  Innovation
+                </span>
+                <span class="d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-success-dark"></i>
+                  Security
+                </span>
+                <span class="d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-success-dark"></i>
+                  User-Centric Design
+                </span>
+                <span class="d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-success-dark"></i>
+                  Transparency
+                </span>
+                <span class="d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-success-dark"></i>
+                  Empowerment
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us section  -->
+    <section class="mt-3 resize-choose fade-up">
+      <div class="container rare background_secondary custom_padd">
+        <div class="row gap-5">
+          <!-- Left column -->
+          <div
+            class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-start mb-4 mb-md-0"
+          >
+            <h3 class="pb-3">Why Choose Us</h3>
+            <p class="text-black-50 mb-5 fs-6">
+              Experience the future of finance with our secure, efficient, and
+              user-friendly financial services. Our cutting-edge platform
+              ensures your transactions are safe, streamlined, and easy to
+              manage, empowering you to take control.
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+              target="_blank"
+              class="btn btn-success font_W d-flex align-items-center gap-2 vid-link-padd-size w-md-auto"
+            >
+              <div class="icon-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="white"
+                  class="icon_vid"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
+                  />
+                </svg>
+              </div>
+              Watch The Video
+            </a>
+          </div>
+
+          <!-- Right column -->
+          <div class="col-12 col-md-6 col-lg-7">
+            <div class="text-center text-md-start">
+              <div
+                class="row row-cols-1 row-cols-md-2 gx-3 gy-3 custom_margin_3rem grido"
+              >
+                <!-- Card 1 -->
+                <div
+                  class="col d-flex flex-column align-items-start text-start"
+                >
+                  <div class="icon-wrapper-choose mb-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon-small"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="mb-2 fw-bold fs-6">Security Features</h4>
+                  <p class="text-black-50">
+                    Data encryption, fraud detection, and prevention mechanisms.
+                  </p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                  class="col d-flex flex-column align-items-start text-start"
+                >
+                  <div class="icon-wrapper-choose mb-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon-small"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="mb-2 fw-bold fs-6">Customer Support</h4>
+                  <p class="text-black-50">
+                    24/7 service via chat, email, phone, and a detailed help
+                    center.
+                  </p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                  class="col d-flex flex-column align-items-start text-start"
+                >
+                  <div class="icon-wrapper-choose mb-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon-small"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="mb-2 fw-bold fs-6">User-Friendly Interface</h4>
+                  <p class="text-black-50">
+                    Easy navigation with responsive design for various devices.
+                  </p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                  class="col d-flex flex-column align-items-start text-start"
+                >
+                  <div class="icon-wrapper-choose mb-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon-small"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="mb-2 fw-bold fs-6">Financial Analytics</h4>
+                  <p class="text-black-50">
+                    Budget tracking, expense categorization, and personalized
+                    insights
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- price section -->
+    <div class="section-heading fade-up">
+      <span
+        class="badge background-green-light text-success-dark mb-4 title-fontsize"
+        >PRICING</span
+      >
+      <h3 class="fs-4 mb-3">Plan for every budget</h3>
+      <p class="fs-6 text-black-50 w-75 auto-headtitle">
+        Experience the future of finance with our secure, efficient, and
+        user-friendly financial services
+      </p>
+    </div>
+    <div class="row justify-content-center rare margin_10 g-5 fade-up">
+      <!-- Personal Card -->
+      <div class="col-12 col-md-6 col-lg-4 p-1 small-card responsive-col">
+        <div class="card border rounded-3 h-100 shadow-sm p-4 resize-price">
+          <div class="card-body text-start">
+            <h4 class="card-title mb-3 fs-3 font_W">Personal</h4>
+            <p class="text-black-50 mb-5 resize-small-price plan-text-height">
+              Choose a plan that fits your personal financial needs and start
+              managing your finances more effectively.
+            </p>
+            <div class="display-4 mb-4 fontweight-price resize-mr-price">
+              $7<span class="h5 text-black-50 fs-6 fontweight-date"
+                >/ month</span
+              >
+            </div>
+            <a href="#" class="btn btn-success padd_top btn-hover"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Card -->
+      <div
+        class="col-12 col-md-6 col-lg-8 p-1 custom_clr rounded-3 shadow-sm big-card responsive-col-big resize-price"
+      >
+        <!-- <div class="card border rounded-3 h-100 shadow-sm p-4 custom_clr"></div> -->
+
+        <div class="row">
+          <div class="col text-start ps-5">
+            <h4 class="card-title mb-0 p-6">Business</h4>
+            <p class="clr_wht">
+              Optimize your business financial operations with our tailored
+              business plans.
+            </p>
+            <div class="fs-1 mb-4 success-light mt-4 fontweight-price">
+              $29<span class="h5 success-light fs-6 fontweight-date"
+                >/ month</span
+              >
+            </div>
+            <a href="#" class="btn btn-light padd_top custom-btn">
+              Get Started
+            </a>
+          </div>
+          <div class="col text-start">
+            <h3 class="ps-5 mt-5 feature">FEATURES</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center mb-4">
+                <span class="me-3 check-circle"
+                  ><i class="bi bi-check text-white fs-4"></i
+                ></span>
+                Personalized financial insights and reports
+              </li>
+              <li class="d-flex align-items-center mb-4">
+                <span class="check-circle me-3"
+                  ><i class="bi bi-check text-white fs-4"></i
+                ></span>
+                Priority customer support
+              </li>
+              <li class="d-flex align-items-center mb-4">
+                <span class="check-circle me-3"
+                  ><i class="bi bi-check text-white fs-4"></i
+                ></span>
+                Access to exclusive investment opportunities
+              </li>
+              <li class="d-flex align-items-center">
+                <span class="check-circle me-3"
+                  ><i class="bi bi-check text-white fs-4"></i
+                ></span>
+                AI-driven financial recommendations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it work section  -->
+    <div class="section-heading step-head-down fade-up">
+      <span
+        class="badge background-green-light text-success-dark mb-4 title-fontsize"
+        >HOW IT WORKS</span
+      >
+      <h3 class="fs-4 mb-3">How It Works</h3>
+      <p class="fs-6 text-black-50 w-75 auto-headtitle">
+        Our platform is designed to make managing your finances simple and
+        efficient. Follow these easy steps to get started:
+      </p>
+    </div>
+
+    <!-- steps for using it  -->
+    <div class="container py-5 rare mb-5 fade-up">
+      <div class="row text-center justify-content-center gx-5 margin-space-htw">
+        <div class="col-12 col-md-3 mb-4 mb-md-0 step">
+          <div class="mb-3">
+            <span
+              class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 bg-success standard-rounded--circle"
+            >
+              1
+            </span>
+          </div>
+          <h5 class="fw-semi-bold">Sign Up</h5>
+          <p class="text-muted fs-6 mt-4 w-htw">
+            Visit our website or download our app to sign up. Provide basic
+            information to set up your secure account.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-3 mb-4 mb-md-0 step">
+          <div class="mb-3">
+            <span
+              class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 bg-success standard-rounded--circle"
+            >
+              2
+            </span>
+          </div>
+          <h5 class="fw-semi-bold">Set Up Your Profile</h5>
+          <p class="text-muted fs-6 mt-4">
+            Add your personal or business details to tailor the platform to your
+            specific needs.
+          </p>
+        </div>
+        <div class="col-12 col-md-3 mb-4 mb-md-0 step">
+          <div class="mb-3">
+            <span
+              class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 bg-success standard-rounded--circle"
+            >
+              3
+            </span>
+          </div>
+          <h5 class="fw-semi-bold">Explore Features</h5>
+          <p class="text-muted fs-6 mt-4">
+            Access your dashboard for a summary of your finances: balances,
+            recent transactions, and insights.
+          </p>
+        </div>
+        <div class="col-12 col-md-3 step">
+          <div class="mb-3">
+            <span
+              class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 bg-success standard-rounded--circle"
+            >
+              4
+            </span>
+          </div>
+          <h5 class="fw-semi-bold">Invest and Grow</h5>
+          <p class="text-muted fs-6 mt-4">
+            Discover a variety of investment opportunities tailored to your
+            financial goals.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5 rare fade-up">
+      <div class="text-light rounded-4 py-5 px-4 bg-success statics-numbers">
+        <div class="row text-center justify-content-center">
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <div class="fs-2 fw-bold mb-2 success-light counter">10K+</div>
+            <div class="fs-6 text-white fontsize-small">
+              Customer Satisfaction
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <div class="fs-2 fw-bold mb-2 success-light counter">200%+</div>
+            <div class="fs-6 text-white fontsize-small">Revenue Increase</div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="fs-2 fw-bold mb-2 success-light counter">20x</div>
+            <div class="fs-6 text-white fontsize-small">Business Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUr services section  -->
+    <div class="section-heading fade-up">
+      <span
+        class="badge background-green-light text-success-dark mb-4 fw-semibold title-fontsize"
+        >OUR SERVICES
+      </span>
+      <h3
+        class="fs-3 mb-3 lh-base w-75 auto-headtitle"
+        style="font-weight: 500"
+      >
+        Empowering Financial Innovation Through Cutting-Edge Services
+      </h3>
+    </div>
+
+    <!-- services content -->
+    <div
+      class="container fade-up py-5 rare service-section mr_btm resize-padd-service"
+    >
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 mb-md-1 ms-md-1 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5 class="card-title fw-semi-bold service-head mb-4">
+                Digital Payments
+              </h5>
+              <p class="text-muted service-text-fontsize">
+                Seamless and secure transactions through various digital
+                platforms, enabling quick and convenient payments for businesses
+                and consumers alike.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 ms-md-3 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5
+                class="card-title fw-semi-bold service-head mb-4 service-wrap"
+              >
+                Personal Finance Management
+              </h5>
+              <p class="card-text text-muted service-text-fontsize">
+                Seamless and secure transactions through various digital
+                platforms, enabling quick and convenient payments for businesses
+                and consumers alike.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3  -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 ms-md-3 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5
+                class="card-title fw-semi-bold service-head mb-4 service-wrap"
+              >
+                Online Lending
+              </h5>
+              <p class="card-text text-muted service-text-fontsize">
+                Fast and accessible lending services that provide personal and
+                business loans through online platforms, simplifying the
+                borrowing process
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 ms-md-3 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5
+                class="card-title fw-semi-bold service-head mb-4 service-wrap"
+              >
+                Investment Platforms
+              </h5>
+              <p class="card-text text-muted service-text-fontsize">
+                User-friendly platforms that allow individuals to invest in
+                stocks, bonds, and other assets with minimal barriers, making
+                investment accessible to all.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 ms-md-3 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5
+                class="card-title fw-semi-bold service-head mb-4 service-wrap"
+              >
+                Cryptocurrency Trading
+              </h5>
+              <p class="card-text text-muted service-text-fontsize">
+                Services that facilitate the buying, selling, and trading of
+                cryptocurrencies, offering users a gateway to the digital
+                currency market.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-md-6 col-lg-4 rmv-padd-service">
+          <div class="card h-100 border shadow-sm service-card-style">
+            <div class="card-body service-margin-btm">
+              <div class="mb-4 ms-md-3 ms-0">
+                <span
+                  class="bg-service-light rounded-circle d-flex align-items-center justify-content-center width-of-wrapicon"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="service-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h5
+                class="card-title fw-semi-bold service-head mb-4 service-wrap"
+              >
+                Insurtech Solutions
+              </h5>
+              <p class="card-text text-muted service-text-fontsize">
+                Innovative insurance services that leverage technology to offer
+                personalized policies, faster claims processing, and enhanced
+                customer experiences.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a
+                href="#"
+                class="text-success-dark text-decoration-none d-flex align-items-center gap-2"
+              >
+                <span
+                  class="icon-circle d-flex align-items-center justify-content-center icon-read-more-wrapper"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-read-more"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS SECTION  -->
+    <div class="section-heading testimon-mar-btm fade-up">
+      <span
+        class="badge background-green-light text-success-dark mb-4 title-fontsize"
+        >TESTIMONIALS</span
+      >
+      <h3 class="fs-4 mb-3">What Our Users Are Saying</h3>
+      <p class="fs-6 text-black-50 w-75 auto-headtitle">
+        Real Stories of Success and Satisfaction from Our Diverse Community
+      </p>
+    </div>
+
+    <!-- testimonials opinions  -->
+    <div class="container py-5 rare fade-up">
+      <div class="row gy-4 gx-3">
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " This platform has completely transformed the way I manage my
+              business finances. The real-time transaction tracking and seamless
+              payment options have saved me so much time and effort! "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-2-min.jpg"
+                alt="John Davis"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">John Davis</p>
+                <p class="testimonial-title mb-0">Small Business Owner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " As a freelancer, managing my finances can be overwhelming. The
+              budgeting tools and personalized insights have made it so much
+              easier to stay on top of my expenses and plan for the future. "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-1-min.jpg"
+                alt="Emily Smith"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">Emily Smith</p>
+                <p class="testimonial-title mb-0">Freelancer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " The investment options and portfolio management tools on this
+              platform are top-notch. The variety of choices caters to all types
+              of investors, from conservative to aggressive. I especially
+              appreciate how the tailored recommendations align perfectly with
+              my financial goals. It's a game-changer for anyone serious about
+              growing their wealth. "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-3-min.jpg"
+                alt="Michael Rodriguez"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">Michael Rodriguez</p>
+                <p class="testimonial-title mb-0">Investor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto mt-up"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " The security features are outstanding. Knowing that my financial
+              data is protected gives me peace of mind, and the platform's
+              efficiency makes it a pleasure to use. "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-5-min.jpg"
+                alt="James Kim"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">James Kim</p>
+                <p class="testimonial-title mb-0">IT Consultant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto mt-up"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " I never thought managing money could be this simple! The
+              user-friendly interface and secure transaction process give me the
+              confidence to handle my finances independently. "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-7-min.jpg"
+                alt="Sarah Lee"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">Sarah Lee</p>
+                <p class="testimonial-title mb-0">College Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 testimonial-card-wrapper">
+          <div
+            class="testimonial-card border shadow-sm rounded-4 p-4 bg-white h-auto mt-up-3"
+          >
+            <p class="opacity-75 test-fontsize pt-3">
+              " The platform's intuitive design and robust features have been a
+              game-changer for my startup. It's helped me streamline operations
+              and focus on growing my business. "
+            </p>
+            <div class="testimonial-user">
+              <img
+                src="./images/person-sq-8-min.jpg"
+                alt="Laura Brown"
+                class="testimonial-avatar"
+              />
+              <div>
+                <p class="testimonial-name mb-0">Laura Brown</p>
+                <p class="testimonial-title mb-0">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="w-100 py-5 bk-faq mr_btm fade-up">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+          <div class="full-container my-5">
+            <!-- Section Header -->
+            <div class="section-heading">
+              <span
+                class="badge background-green-light text-success-dark mb-4 title-fontsize"
+              >
+                FAQ
+              </span>
+              <h3 class="fs-4 mb-3">Frequently Asked Questions</h3>
+              <p class="fs-6 text-black-50 w-75 auto-headtitle">
+                Utilize our tools to develop your concepts and bring your vision
+                to life. Once complete, effortlessly share your creations.
+              </p>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <!-- Item 1 -->
+              <div
+                class="accordion-item mb-2 shadow-sm rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    What services does your web agency offer?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionPanelsStayOpenExample"
+                >
+                  <div
+                    class="accordion-body accordion-fontsize text-muted accordion-text-opacity"
+                  >
+                    Our web agency offers a comprehensive range of services
+                    including web design and development, e-commerce solutions,
+                    SEO optimization, content creation, website maintenance, and
+                    digital marketing strategies. We tailor our services to meet
+                    the unique needs of each client, ensuring a customized
+                    approach to every project.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div
+                class="accordion-item mb-2 shadow-sm rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    How much does it cost to build a website?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                >
+                  <div
+                    class="accordion-body accordion-fontsize text-muted accordion-text-opacity"
+                  >
+                    The cost of building a website can vary widely depending on
+                    the complexity, features, and specific requirements of your
+                    project. We offer several pricing packages to accommodate
+                    different budgets and needs. After an initial consultation,
+                    we can provide a detailed quote based on your specific goals
+                    and objectives.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div
+                class="accordion-item mb-2 shadow-sm rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    How long does it take to design and develop a website?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                >
+                  <div
+                    class="accordion-body accordion-fontsize text-muted accordion-text-opacity"
+                  >
+                    The timeline for designing and developing a website depends
+                    on the project's complexity and scope. Typically, a standard
+                    business website takes about 4-6 weeks to complete, while
+                    more complex projects like e-commerce sites or custom
+                    applications may take longer. We work closely with our
+                    clients to establish a realistic timeline and keep you
+                    informed throughout the process.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div
+                class="accordion-item mb-2 shadow-sm rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Will my website be mobile-friendly?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                >
+                  <div
+                    class="accordion-body accordion-fontsize text-muted accordion-text-opacity"
+                  >
+                    Absolutely! All the websites we design and develop are fully
+                    responsive, meaning they are optimized to work seamlessly
+                    across all devices, including desktops, tablets, and
+                    smartphones. Ensuring a great user experience on mobile
+                    devices is a top priority in our development process.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div
+                class="accordion-item mb-2 shadow-sm rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    Do you provide ongoing support and maintenance for websites?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                >
+                  <div
+                    class="accordion-body accordion-fontsize text-muted accordion-text-opacity"
+                  >
+                    Yes, we offer ongoing support and maintenance services to
+                    ensure your website remains up-to-date, secure, and
+                    functioning smoothly. Our maintenance packages can include
+                    regular updates, security monitoring, backups, and technical
+                    support to address any issues that may arise. We're here to
+                    help you keep your website running efficiently long after
+                    it's launched.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION  -->
+    <div class="section-heading contact-mar-btm fade-up">
+      <span
+        class="badge background-green-light text-success-dark mb-4 title-fontsize"
+        >CONTACT
+      </span>
+      <h3 class="fs-4 mb-3">Contact Us</h3>
+      <p class="fs-6 text-black-50">
+        Utilize our tools to develop your concepts and bring your vision to
+        life. Once<br />
+        complete, effortlessly share your creations.
+      </p>
+    </div>
+
+    <!-- FORM CONTENT  -->
+
+    <div class="container py-5 rare fade-up">
+      <div class="row justify-content-center g-4 align-items-stretch">
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-6 mb-4 mb-lg-0">
+          <div class="contact-info bg-white p-4 h-100">
+            <div class="mb-5 d-flex align-items-center">
+              <span class="icon-wrapper-form me-3">
+                <i class="bi bi-telephone"></i>
+              </span>
+              <div>
+                <div class="form-fontsize form-opacity mb-1">Phone</div>
+                <div class="form-fontweight form-fontsize">
+                  +(20 109 956 773)
+                </div>
+              </div>
+            </div>
+            <div class="mb-5 d-flex align-items-center">
+              <span class="icon-wrapper-form me-3">
+                <i class="bi bi-envelope"></i>
+              </span>
+              <div>
+                <div class="form-fontsize form-opacity mb-1">Email</div>
+                <div class="form-fontweight form-fontsize">
+                  Gado@mydomain.com
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="icon-wrapper-form me-3">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+              <div>
+                <div class="form-fontsize form-opacity mb-1">Address</div>
+                <div class="form-fontweight form-fontsize">
+                  Hamouda El Khatep Street El Santa, Gharbia, Egypt
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <form class="bg-white p-4">
+            <div class="mb-3">
+              <label for="name" class="form-label form-fontsize form-opacity"
+                >Name</label
+              >
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label form-fontsize form-opacity"
+                >Email</label
+              >
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label form-fontsize form-opacity"
+                >Subject</label
+              >
+              <input type="text" class="form-control" id="subject" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label form-fontsize form-opacity"
+                >Message</label
+              >
+              <textarea class="form-control" rows="4" id="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success padd_top btn-hover">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer class="w-100 py-5 bk-faq fade-up">
+      <div class="container py-4 rare mb-5">
+        <!-- Newsletter Section -->
+        <div class="row align-items-center mb-5 g-3">
+          <div class="col-12 col-md-7 padd-start-2">
+            <h5 class="footer-fontweight footer-fontsize">
+              Join our newsletter
+            </h5>
+            <p class="text-muted mb-0">
+              Stay updated with our latest templates and offers—join our
+              newsletter today!
+            </p>
+          </div>
+          <div class="col-12 col-md-5">
+            <form class="newsletter-form d-flex gap-1">
+              <input
+                type="email"
+                class="form-control flex-fill me-2 mb-2 mb-md-0 border-footer footer-control"
+                placeholder="Enter your Email"
+              />
+              <button
+                class="btn btn-success padd_top btn-hover flex-shrink-0"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Menu Section -->
+        <div class="row text-start g-4">
+          <!-- About -->
+          <div class="col-12 col-md-5 padd-start-2">
+            <h6 class="mb-2 footer-fontweight footer-link-fontsize">About</h6>
+            <p class="text-muted footer-text text-break">
+              Utilize our tools to develop your concepts and bring your vision
+              to life. Once complete, effortlessly share your creations.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div class="col-6 col-md-2 mb-3 mb-md-0">
+            <h6
+              class="footer-fontweight footer-link-fontsize mb-2 padd-start-2"
+            >
+              Company
+            </h6>
+            <ul class="list-unstyled small text-black-50">
+              <li><a href="#" class="footer-link">Leadership</a></li>
+              <li>
+                <a href="#" class="footer-link">
+                  Careers
+                  <span
+                    class="badge bg-service-light text-success-dark ms-2 p-1"
+                    >we're hiring</span
+                  >
+                </a>
+              </li>
+              <li><a href="#" class="footer-link">Case Studies</a></li>
+              <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+              <li><a href="#" class="footer-link">Privacy Policy</a></li>
+              <li><a href="#" class="footer-link">404 page</a></li>
+            </ul>
+          </div>
+
+          <!-- Accounts -->
+          <div class="col-6 col-md-2 mb-3 mb-md-0">
+            <h6
+              class="footer-fontweight footer-link-fontsize mb-2 padd-start-2"
+            >
+              Accounts
+            </h6>
+            <ul class="list-unstyled small text-black-50">
+              <li><a href="#" class="footer-link">Register</a></li>
+              <li><a href="#" class="footer-link">Sign in</a></li>
+              <li><a href="#" class="footer-link">Forgot Password</a></li>
+              <li><a href="#" class="footer-link">Coming soon</a></li>
+              <li><a href="#" class="footer-link">Portfolio Masonry</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h6
+              class="footer-fontweight footer-link-fontsize mb-2 padd-start-2"
+            >
+              Contact
+            </h6>
+            <ul class="list-unstyled small text-black-50">
+              <li class="text-break">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Tanta, Gharbia, Egypt
+              </li>
+              <li>
+                <a href="mailto:Gado@mydomain.com" class="footer-link">
+                  <i class="bi bi-envelope-fill me-2"></i>Gado@mydomain.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+201099567733" class="footer-link">
+                  <i class="bi bi-telephone-fill me-2"></i>+20 (109) 9567 733
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">
+                  <i class="bi bi-globe me-2"></i>FreeBootstrap.net
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="rare">
+        <footer class="text-center py-3 px-3">
+          <p class="mb-0 info-size text-break">
+            &copy; Built a professional landing page with Bootstrap,
+            implementing all features and styling from scratch. Adapted concepts
+            from an online demo, but the code is entirely my own work. ❤️ by
+            <a
+              href="https://www.facebook.com/ahmed.w.gado?locale=ar_AR"
+              target="_blank"
+              class="footer-link"
+              >Ahmed Wageh</a
+            >
+          </p>
+        </footer>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 required: Add Bootstrap CSS link in your <head> -->
+    <!-- Bootstrap Icons CDN (for check mark icons) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      // لما الصفحة تفتح، رجّع المستخدم لنفس المكان اللي كان فيه قبل الريلود
+      window.addEventListener("load", () => {
+        const savedScrollY = sessionStorage.getItem("scrollY");
+        if (savedScrollY) {
+          window.scrollTo(0, parseInt(savedScrollY));
+          sessionStorage.removeItem("scrollY"); // امسحها بعد الاستخدام عشان متتكرر
+        }
+      });
+
+      // قبل ما الصفحة تعمل reload، خزّن مكان السكروول الحالي
+      window.addEventListener("beforeunload", () => {
+        sessionStorage.setItem("scrollY", window.scrollY);
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const overlay = document.querySelector(".sidebar-overlay");
+        const sidebar = document.getElementById("navbarNav");
+
+        overlay.addEventListener("click", function () {
+          sidebar.classList.remove("show");
+        });
+      });
+      const counters = document.querySelectorAll(".counter");
+      let started = false;
+
+      function startCounting() {
+        counters.forEach((counter) => {
+          const originalText = counter.innerText.trim();
+
+          // فصل الرقم عن الحروف
+          const numberMatch = originalText.match(/[\d\.]+/);
+          const suffix = originalText.replace(numberMatch[0], ""); // باقي النص
+
+          const target = parseFloat(numberMatch[0]);
+          let current = 0;
+          const increment = target / 100;
+
+          const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+              counter.innerText = Math.floor(current) + suffix;
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.innerText = target + suffix;
+            }
+          };
+
+          updateCounter();
+        });
+      }
+
+      // تشغيل العد أول مرة يظهر فيها العنصر
+      window.addEventListener("scroll", () => {
+        const section = document.querySelector(".statics-numbers");
+        const rect = section.getBoundingClientRect();
+
+        if (!started && rect.top < window.innerHeight) {
+          startCounting();
+          started = true;
+        }
+      });
+      const fadeElements = document.querySelectorAll(".fade-up");
+
+      function revealOnScroll() {
+        fadeElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("#navbarNav");
+        nav.classList.remove("show"); // يقفل المنيو لو مفتوحة
+      });
+    </script>
+  </body>
+</html>

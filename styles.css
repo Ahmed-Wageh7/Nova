@@ -1,0 +1,1595 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+:root {
+  --main-color-primary: #1f5a59;
+  --main-color-darker: #174443;
+  --main-color-secondary: #e8fae6;
+  --main-color-secondary-light: #f2faf1;
+  --gray-color-main: #6f6b6b;
+  --gray-darker: #908d8d;
+  --bs-secondary-rgb: #f8fdf7;
+  --white_second: #ffffffe4;
+  --text-white: #f0f7ef;
+  --fontsize-small: 0.9rem;
+  --word-space-for-muted: 8px;
+}
+
+.btn-success {
+  background-color: var(--main-color-primary) !important;
+}
+.bg-success {
+  background-color: var(--main-color-primary) !important;
+}
+.success-light {
+  color: var(--main-color-secondary) !important;
+}
+.bg-service-light {
+  background-color: var(--main-color-secondary) !important;
+}
+.text-success-dark {
+  color: var(--main-color-primary) !important;
+}
+.background-green-light {
+  background-color: var(--main-color-secondary-light) !important;
+}
+.text-white {
+  color: var(--text-white) !important;
+}
+.fontsize-small {
+  font-size: var(--fontsize-small) !important;
+  font-weight: 300 !important;
+}
+
+.btn.btn-success.btn-hover:hover {
+  background-color: var(--main-color-darker) !important;
+  transform: translateY(-2px);
+  transition: all 0.4s ease-in;
+}
+.padd-for-navBtn {
+  padding: 0.6rem 1.2rem !important;
+}
+.title-fontsize {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+.auto-headtitle {
+  margin: 0 auto;
+}
+
+.standard-rounded--circle {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  color: var(--white_second);
+}
+@media (max-width: 500px) {
+  .standard-rounded--circle {
+    margin-bottom: 1rem !important;
+  }
+  .step-head-down {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.word-space {
+  word-spacing: var(--word-space-for-muted) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.rare {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0; /* padding صغير من الجوانب */
+}
+
+@media (max-width: 1000px) {
+  .rare {
+    max-width: 100%;
+    padding: 0 !important;
+  }
+}
+
+/*  all about nav  ///////// ////////// / ////////// */
+.sticky-top {
+  z-index: 1020;
+  background-color: #f7f6f6;
+}
+
+.nav-item {
+  padding-left: 4px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  color: var(--gray-color-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* الخط المتحرك */
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--gray-darker);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* تأثير الـ hover */
+.navbar .nav-link:hover {
+  color: #323232 !important;
+}
+
+.navbar .nav-link:hover::before {
+  width: 100%;
+  background-color: #323232;
+}
+
+/* يخفي السهم من Dropdown */
+.navbar .nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+/* حجم الخط */
+.navbar .nav-link {
+  font-size: 15px;
+  font-weight: 450;
+}
+.navbar .nav-link.active {
+  color: #323232 !important;
+}
+
+.navbar .nav-link.active::before {
+  width: 100%;
+  background-color: #323232;
+}
+
+.navbar-brand {
+  margin-right: 1rem;
+  z-index: 999999;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    padding-left: 1.3rem !important;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-brand {
+    padding-left: 0rem !important;
+  }
+}
+
+.navbar .container,
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  display: block;
+  max-height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .navbar .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+
+    width: 100%;
+  }
+
+  /* ترتيب العناصر داخل navbar-collapse */
+  .navbar-collapse {
+    /* display: flex !important; */
+    /* justify-content: space-between !important; */
+    align-items: center !important;
+    width: 100%;
+  }
+
+  /* اللوجو يفضل أول حاجة */
+
+  /* الـ nav items في النص */
+  .navbar-nav {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* margin: 0 !important; */
+    padding: 0 !important;
+    /* flex: 1; */
+    justify-content: center;
+  }
+
+  /* زر Get Started على أقصى اليمين */
+  .navbar-nav .btn {
+    margin-left: auto !important;
+  }
+
+  /* نزيل أي padding من العناصر */
+  .navbar-nav .nav-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar {
+    padding-right: 0 !important;
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 567px) {
+  .btn-get-started {
+    display: none !important;
+  }
+}
+/* sidebar على الموبايل */
+@media (max-width: 991.98px) {
+  #navbarNav {
+    position: fixed;
+    top: 100%;
+    left: 0; /* مخفي خارج الشاشة */
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-20px);
+    transition: left 0.3s ease;
+    z-index: 1050; /* فوق باقي المحتوى */
+    padding-top: 3.5rem; /* لتجنب اللوجو */
+  }
+
+  /* عند فتح collapse يظهر من اليسار */
+  #navbarNav.show {
+    transform: translateY(0);
+    opacity: 1;
+    left: 0;
+  }
+
+  /* اجعل القوائم تتكدس رأسياً */
+  #navbarNav .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+
+  /* زر الديسكتوب يختفي */
+  .btn-get-started {
+    display: none !important;
+  }
+}
+/* overlay للموبايل */
+@media (max-width: 991.98px) {
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1040;
+  }
+
+  /* عند فتح sidebar */
+  #navbarNav.show ~ .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* sidebar على الموبايل مع مسافة من اليسار */
+@media (max-width: 991.98px) {
+  #navbarNav {
+    position: fixed;
+    top: 0;
+    left: -270px; /* مخفي خارج الشاشة */
+    height: 100%;
+    width: 40rem;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    z-index: 9990;
+  }
+
+  /* عند فتح sidebar يظهر مع مسافة من اليسار */
+  #navbarNav.show {
+    padding-left: 3rem !important; /* المسافة من اليسار */
+    padding-top: 5rem !important;
+  }
+
+  #navbarNav .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+
+  .btn-get-started {
+    display: none !important;
+  }
+
+  /* overlay بلور */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* البلور */
+    background-color: rgba(0, 0, 0, 0.2); /* شوية غمق مع البلور */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1040;
+  }
+
+  /* عند فتح sidebar يظهر overlay */
+  #navbarNav.show ~ .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (max-width: 700px) {
+  #navbarNav {
+    width: 30rem;
+  }
+}
+@media (max-width: 600px) {
+  #navbarNav {
+    width: 20rem;
+  }
+}
+/* HERO SECTION /////// //////////// / / // / // //////// /////////////////  */
+
+section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 767px) {
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+section p {
+  font-size: 0.9rem;
+}
+
+.btn-success {
+  background-color: var(
+    --main-color-primary
+  ) !important; /* اللون الغامق اللي انت عايزه */
+  border-color: var(--main-color-primary) !important;
+}
+
+/* نلغي أي تأثير hover */
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: var(--main-color-primary) !important;
+  border-color: var(--main-color-primary) !important;
+}
+.image-hero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .image-hero {
+    margin-top: -2rem !important;
+    margin-bottom: 7rem !important;
+  }
+}
+
+.over-absolute {
+  position: absolute;
+  right: 60%;
+  bottom: -110px;
+  width: 300px;
+  background: #f9f9f9;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.11);
+}
+@media (max-width: 1200px) {
+  .over-absolute {
+    top: 170px;
+    padding: 0rem !important;
+    height: 20rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .over-absolute {
+    margin: 2rem auto 0;
+    top: 35rem;
+    width: 23rem;
+    left: 1.5rem !important;
+  }
+  .mr_btm {
+    margin-bottom: 3rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .over-absolute {
+    width: 22rem;
+    padding: 2rem !important;
+    height: 23rem !important;
+    top: 19rem !important;
+    left: 1.6rem !important;
+  }
+  .image-hero {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .mr_btm {
+    margin-bottom: 1rem !important;
+  }
+  .resize-padd-hero {
+    padding-left: 0rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .over-absolute {
+    top: 10rem !important;
+    height: 20rem !important;
+    padding: 0 !important;
+    width: 18rem;
+  }
+  .image-hero {
+    margin-bottom: 4rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .over-absolute {
+    display: none;
+  }
+}
+
+.headtitle {
+  display: flex;
+  flex-wrap: wrap; /* بدل nowrap */
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* خفّض المسافة شوي */
+}
+@media (max-width: 992px) {
+  .headtitle {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.badge {
+  opacity: 0.8;
+  font-size: 10px;
+}
+@media (max-width: 992px) {
+  .badge {
+    font-size: 13px;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 3rem 1.5rem !important;
+  }
+}
+
+.fs-250px {
+  font-size: 45px;
+  font-weight: 400 !important;
+}
+
+.hero-head-weight {
+  font-weight: 500 !important;
+}
+
+@media (max-width: 992px) {
+  .hero-head-weight {
+    margin-bottom: 16px !important;
+  }
+}
+
+.hero-fontsize {
+  font-size: 14px;
+  opacity: 0.6;
+}
+@media (max-width: 500px) {
+  section p.hero-fontsize {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    margin: 0 auto 2rem !important; /* لو عايزه في النص */
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-fontsize {
+    font-size: 16px !important;
+    opacity: 0.8 !important;
+    width: 75% !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+.padd-for-btn {
+  padding: 0.8rem 1.5rem !important;
+}
+.text-muted {
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .resize-small-herotext {
+    font-size: 14px !important;
+    margin-bottom: 1.4rem !important;
+  }
+  .resizehero-btn-mr {
+    margin-bottom: 1.4rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .fs-250px {
+    font-size: 30px !important;
+  }
+  .headtitle {
+    gap: 2rem !important;
+  }
+  .over-absolute {
+    left: -3rem;
+  }
+  .hero-container {
+    margin-left: 3rem;
+  }
+}
+
+.learn-more-btn {
+  color: #000; /* لون الخط الأساسي */
+  background-color: var(--white_second);
+  border: 1px solid #ddd !important;
+  transition: all 0.3s ease;
+  padding: 15px 32px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: inherit !important;
+}
+
+.icon-gray img {
+  filter: brightness(80%) grayscale(120%);
+  opacity: 1; /* ممكن تخليها أفتح أو أغمق */
+}
+
+.link_border {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+.link_border * {
+  margin: 0; /* نشيل أي مسافات من العناصر الداخلية */
+  padding: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--main-color-primary);
+  display: flex;
+  align-items: center; /* يسنتر عموديًا */
+  justify-content: center;
+}
+
+.grey_yo {
+  color: #908d8d;
+  font-size: 12px;
+}
+
+ul.list-unstyled {
+  width: 250px; /* العرض اللي انت عايزه */
+  margin: 0 auto; /* عشان تبقى في النص */
+}
+
+ul.list-unstyled li {
+  width: 100%; /* يخلي اللي يمتد بالكامل */
+}
+
+.mr_btm {
+  margin-bottom: 7rem;
+  margin: 0 auto 7rem;
+}
+
+.mr_rgt {
+  padding-right: 3rem;
+  margin-top: 2rem;
+}
+.fs_15px {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading span.badge {
+  margin-bottom: 1rem;
+}
+
+.section-heading h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.section-heading p {
+  color: #6c757d; /* نفس لون text-black-50 */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .section-heading h3 {
+    font-size: 1.4rem;
+  }
+  .section-heading p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .resize-mr-price {
+    margin-top: 0rem !important;
+  }
+}
+.color_green--light {
+  background-color: var(--main-color-secondary);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.icon-gray img {
+  height: 36px;
+  width: auto;
+}
+@media (max-width: 500px) {
+  .icon-gray img {
+    height: 26px;
+  }
+}
+
+/* //////////////////////////////////////// //////////////////////////////////////// ////////////////////////////////////////  */
+/* ///.///////// ABOUT SEVCTION //////////////////////////////////////// */
+/* //////////////////////////////////////// //////////////////////////////////////// 
+ */
+
+@media (max-width: 1200px) {
+  .about-container {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .about-padd-1200 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.about-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+  .about-container .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* العمود اليمين (الكلام) يكون الأول */
+  .about-container .row > div:nth-child(2) {
+    order: 1;
+  }
+
+  /* العمود الشمال (الصورة) يكون الثاني */
+  .about-container .row > div:nth-child(1) {
+    order: 2;
+  }
+  .rmv-padd-about {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .text-black-50 {
+    color: rgb(80, 78, 78) !important;
+  }
+}
+
+/* /////////////////////////////////////////// */
+/* ///////////////   WHY CHOOSE US SECTION  /////////////// */
+/* /////////////////////////////////////////// */
+
+.background_secondary {
+  background-color: var(--bs-secondary-rgb);
+}
+
+.custom_margin_3rem {
+  margin-left: 4rem;
+}
+
+.custom_padd {
+  padding: 4rem;
+}
+@media (max-width: 1100px) {
+  .custom_padd {
+    padding: 3rem !important;
+  }
+  .resize-choose {
+    margin-top: 0 !important;
+    padding-top: 1rem;
+  }
+}
+
+.icon-wrapper-choose {
+  background-color: var(--main-color-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px; /* حجم الخلفية */
+  height: 55px;
+  border-radius: 50%; /* تخليها دايرة */
+  padding: 15px;
+}
+
+.icon-small {
+  width: 26px;
+  height: 26px;
+  color: var(--main-color-primary);
+}
+@media (max-width: 1200px) {
+  .icon-small {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .icon-wrapper-choose svg.icon-small {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  background-color: white; /* خلفية بيضا */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_vid {
+  width: 15px;
+  height: 15px;
+  fill: var(--main-color-primary);
+  stroke: var(--main-color-primary); /* لون الأيقونة أخضر */
+}
+
+.font_W {
+  font-weight: 500;
+}
+.vid-link-padd-size {
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+@media (max-width: 992px) {
+  .custom_margin_3rem {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .resize-choose {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+@media (max-width: 992px) {
+  /* الكولوم اللي فيه النص ياخد العرض كله */
+  .resize-choose .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 2rem;
+  }
+
+  /* الكولوم اللي فيه الكروت ياخد 100% */
+  .resize-choose .col-lg-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* الكروت نفسها عمودين */
+  .cards-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 2rem 1rem;
+  }
+
+  .cards-row > .col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 767px) {
+  /* الكروت نفسها في صفين، كل صف فيه كرتين */
+  .grido {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0rem !important; /* المسافة بين الكروت */
+  }
+
+  .grido > .col {
+    flex: 0 0 50% !important; /* كل كرت ياخد نصف عرض */
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 500px) {
+  .grido > .col {
+    flex: 0 0 100% !important; /* كل كرت ياخد العرض كله */
+    max-width: 100% !important;
+  }
+}
+/* ///////////////////////////////////////////// */
+/*  ///////////////////////// PRICE SECION  //////////////////// */
+/* ///////////////////////////////////////////// */
+
+.padd_top {
+  padding: 0.7rem 1.3rem !important;
+}
+
+.custom_clr {
+  background-color: var(--main-color-primary);
+}
+
+.p-6 {
+  padding: 3rem 0rem 2rem;
+  padding-right: 7rem;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: white;
+}
+.clr_wht {
+  color: rgba(255, 255, 255, 0.792);
+}
+
+.custom-btn:hover {
+  background-color: var(--main-color-primary);
+  color: var(--white_second);
+  border: 1px solid var(--white_second);
+}
+
+.feature {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  color: #ffffffb9;
+  margin-bottom: 2rem;
+}
+.check-circle {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1; /* مهم جداً لتثبيت شكل الدائرة */
+  flex-shrink: 0; /* تمنع تصغير العنصر في flex */
+}
+
+.fontweight-price {
+  font-weight: 700;
+}
+
+.fontweight-date {
+  font-weight: 500;
+}
+.plan-text-height {
+  min-height: 60px;
+}
+
+.list-unstyled {
+  color: rgba(255, 255, 255, 0.8);
+}
+.margin_10 {
+  margin-bottom: 8rem;
+}
+
+@media (max-width: 767px) {
+  .margin_10 {
+    margin-bottom: 4rem !important;
+  }
+  .list-unstyled {
+    margin-left: 1.4rem !important;
+  }
+}
+@media (max-width: 992px) {
+  /* قلل الـ padding بتاع العنوان الكبير */
+  .p-6 {
+    padding: 1.8rem 0 1rem !important;
+    padding-right: 0 !important;
+    font-size: 1.5rem !important;
+  }
+
+  .clr_wht {
+    font-size: 0.95rem;
+  }
+
+  .fontweight-price {
+    font-size: 1.9rem !important;
+  }
+
+  .fontweight-date {
+    font-size: 0.95rem !important;
+  }
+
+  .feature {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 12px !important;
+  }
+
+  .list-unstyled li {
+    margin-bottom: 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .check-circle {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* مهم جداً: نزّل العمود التاني بمسافة بسيطة لما يكسر */
+  .custom_clr .row > .col {
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .small-card {
+    max-width: 50%; /* قلل العرض زي ما تحب */
+    margin: 0 auto; /* يخليه ثابت في النص */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    padding-right: 0rem !important; /* قلل البادينج جوه الكارد */
+  }
+  .card-body {
+    padding-right: 1.5rem !important;
+  }
+}
+@media (max-width: 767px) {
+  .card-body {
+    margin-bottom: 0rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  /* الكارد الصغيرة = 4 أعمدة */
+  .small-card {
+    flex: 0 0 auto;
+    width: 35%; /* 4/12 */
+    margin: 0 !important;
+  }
+
+  /* الكارد الكبيرة = 11 عمود */
+  .big-card {
+    flex: 0 0 auto;
+    width: 60%; /* 11/12 */
+    margin: 0 !important;
+  }
+  .margin_10 {
+    gap: 1rem !important;
+  }
+}
+@media (max-width: 767px) {
+  .responsive-col,
+  .responsive-col-big {
+    flex: 0 0 95% !important;
+    max-width: 100% !important; /* التأكد من أن الكارد ما تتقسمش */
+    margin-left: 0.5rem !important; /* مسافة بسيطة من الشمال */
+    margin-right: 0.5rem !important; /* مسافة بسيطة من اليمين */
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .resize-price {
+    width: 97% !important;
+    margin: 0 auto !important;
+  }
+  .resize-small-price {
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-heading p {
+    width: 80% !important;
+  }
+}
+@media (max-width: 500px) {
+  .section-heading p {
+    font-size: 15px !important; /* أصغر حجم */
+    width: 90% !important; /* يخليه يلتف بس مش كامل الشاشة */
+    margin: 0 auto; /* في النص */
+    white-space: normal; /* لو فيه كلمة كبيرة تتحكم في الالتفاف */
+    line-height: 1.8; /* يخلي السطور أقرب لبعض */
+    opacity: 0.7;
+  }
+}
+/* //////////////////////////////////////////////////////////// */
+/* //////////////////// HOW IT WORK  SECTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////// */
+
+.fw-semi-bold {
+  font-weight: 400;
+}
+
+/* .step {
+  position: relative;
+} */
+
+/* الخط المايل */
+/* .step::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -50%;
+  left: 240px;
+  width: 40%;
+  height: 2px;
+  border-top: 2px dashed rgba(0, 0, 0, 0.2);
+  transform: skewY(-7deg);
+} */
+
+@media (max-width: 992px) {
+  .step {
+    flex: 0 0 auto;
+    width: 50%; /* 2 أعمدة لكل صف */
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+.step:last-child::after {
+  display: none;
+}
+.service_margin {
+  margin-top: 8rem !important;
+}
+
+.statics-numbers {
+  min-height: 200px;
+}
+@media (max-width: 1200px) {
+  .statics-numbers {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .statics-numbers {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+  .margin-space-htw {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+  .w-htw {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .step {
+    width: 80%; /* كل سطر عمود واحد */
+  }
+}
+
+/* ///////////////////////////////////////////// */
+/* ///////////////////// SERVICES /////////// */
+/* ///////////////////////////////////////////// */
+
+.width-of-wrapicon {
+  width: 40px;
+  height: 40px;
+}
+/* @media (max-width: 576px) {
+  .width-of-wrapicon {
+    width: 30px;
+    height: 30px;
+  }
+} */
+.service-icon {
+  width: 40px;
+  height: 40px;
+  stroke: var(--main-color-primary);
+  position: relative;
+  left: -12px;
+  top: -4px;
+}
+@media (max-width: 992px) {
+  .service-icon {
+    left: 0px;
+  }
+}
+.service-text-fontsize {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.99;
+}
+
+.service-head {
+  font-size: 20px;
+  margin-bottom: 3rem;
+  min-height: 60px;
+}
+
+@media (max-width: 767px) {
+  .service-head {
+    margin-bottom: -1rem !important;
+  }
+}
+/* @media (max-width: 576px) {
+  .icon-read-more-wrapper {
+    width: 26px;
+    height: 26px;
+  }
+  .gap-2 {
+    gap: 0.25rem !important;
+  }
+} */
+
+.icon-read-more {
+  width: 20px;
+  height: 20px;
+  stroke: var(--main-color-primary);
+  padding: 2px;
+  border-radius: 50%;
+}
+.icon-read-more-wrapper {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.service-margin-btm {
+  margin-bottom: 4rem;
+}
+.service-card-style {
+  max-width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  .service-card-style {
+    padding-left: 1rem !important;
+  }
+}
+
+.service-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .rmv-padd-service {
+    padding-right: 0px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+  }
+  .resize-padd-service {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .service-section .row {
+    row-gap: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .rmv-padd-service {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+}
+/* ////////////////////////////////////////////////////// */
+/* ///////////////////////// TESTIMONIALS SECTION  /////////////////////////*/
+/* ////////////////////////////////////////////////////// */
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  height: 100%;
+}
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.testimonial-name {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.testimonial-title {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0;
+}
+
+.test-fontsize {
+  font-size: 14.5px;
+}
+
+@media (max-width: 992px) {
+  .testimonial-card-wrapper {
+    flex: 0 0 auto;
+    width: 50%;
+    margin: 0 auto 1rem;
+  }
+
+  .testimonial-card-wrapper .testimonial-card {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* لو فيه أي padding إضافي في inner elements (مثلاً .mb-4, .mb-md-0) */
+  .testimonial-card-wrapper .mb-4,
+  .testimonial-card-wrapper .mb-md-0 {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-card-wrapper {
+    width: 95% !important;
+    margin: 0 auto 1rem !important;
+  }
+  .testimon-mar-btm {
+    margin-bottom: 5rem !important;
+  }
+}
+
+/* ///////////////////////////////////////////// */
+/* ///////////////////////// FAQ SECTION  /////////////////////////*/
+/* ///////////////////////////////////////////// */
+
+.mt-up {
+  margin-top: -8.5rem !important;
+}
+.mt-up-3 {
+  margin-top: -3rem !important;
+}
+.accordion-fontsize {
+  font-size: 14px;
+}
+.accordion-text-opacity {
+  opacity: 0.8;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.accordion-item {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important; /* ظل خفيف جدًا */
+  border: 0.5px solid #eee; /* حد بسيط لو حابب */
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0.6);
+}
+
+.bk-faq {
+  background-color: #fafafa;
+}
+
+.full-container {
+  max-width: 700px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .full-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  .bk-faq {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .full-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.accordion-button {
+  font-weight: 450;
+  font-size: 1rem;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-item {
+  border: none;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/*///////////////// contact us //////////////////////////////////////////  */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+.icon-wrapper-form {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #3e5565;
+  border: 1px solid #e4e4e4;
+  flex-shrink: 0;
+}
+
+.contact-info .fw-semibold {
+  color: #7d899b;
+  font-size: 1rem;
+}
+
+.contact-info div {
+  font-size: 1rem;
+}
+
+.form-fontweight {
+  font-weight: 600 !important;
+}
+.form-fontsize {
+  font-size: 14px !important;
+}
+
+.form-opacity {
+  opacity: 0.6 !important;
+}
+.form-control {
+  padding: 0.6rem 1rem;
+  border: 0.5px solid rgb(224, 216, 216);
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border: 1px solid #999;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 767px) {
+  form {
+    padding: 1.5rem;
+  }
+  .contact-mar-btm {
+    margin-bottom: 1rem !important;
+  }
+  .contact-info {
+    padding-bottom: 0rem !important;
+  }
+  .bg-white {
+    padding-top: 0rem !important;
+    margin-top: 0rem !important;
+  }
+}
+/* ////////////////////////////////////////////////////// */
+/* ///////////////////////FOOTER /////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+.newsletter-form input {
+  min-width: 0;
+}
+@media (max-width: 992px) {
+  .padd-start-2 {
+    padding-right: 0rem !important;
+  }
+}
+@media (max-width: 767px) {
+  .newsletter-form {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .newsletter-form input {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+  .padd-start-2 {
+    padding-left: 1.5rem !important;
+  }
+}
+.footer ul li {
+  margin-bottom: 0.4rem;
+}
+
+.border-footer {
+  border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+}
+.border-footer:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-fontweight {
+  font-weight: 400 !important;
+}
+.footer-control {
+  background-color: #fcfcfc !important;
+}
+.footer-control:focus {
+  background-color: #fff !important;
+}
+
+.footer-fontsize {
+  font-size: 19px !important;
+}
+
+.footer-link-fontsize {
+  font-size: 15px !important;
+}
+.footer-text {
+  max-width: 250px;
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .footer-text {
+    max-width: 90%; /* ياخد العرض كله */
+    font-size: 13px !important;
+  }
+}
+.footer-link {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+ul.list-unstyled li {
+  margin-bottom: 0.8rem; /* أو 1.5rem لو عايز فرق أكبر */
+}
+
+.margin-links {
+  margin-bottom: 1rem;
+}
+
+.footer-link:hover .badge {
+  background-color: var(--main-color-primary) !important;
+  color: #fff !important;
+  transition: 0.3s ease !important;
+}
+
+.footer-link i,
+li span i {
+  color: #000;
+}
+.info-size {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+  .section {
+    margin-right: 0 !important;
+    padding-right: 0rem !important;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
